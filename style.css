@@ -1,0 +1,155 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f0f0f0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.search input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.input-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-section input,
+.input-section select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  flex: 1;
+}
+
+.input-section button {
+  padding: 10px 14px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+ul#task-list,
+ul#deleted-task-list {
+  list-style: none;
+  padding: 0;
+}
+
+#task-list li,
+#deleted-task-list li {
+  background: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  position: relative;
+}
+
+#task-list li.completed span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+#task-list li .actions,
+#deleted-task-list li .actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  gap: 10px;
+}
+
+#task-list button,
+#deleted-task-list button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+}
+
+.task-details {
+  display: none;
+  padding: 10px;
+  background: #f3f3f3;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.task-details textarea {
+  width: 100%;
+  height: 60px;
+  margin-top: 5px;
+  border-radius: 6px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+.subtasks {
+  margin-top: 10px;
+}
+
+.subtasks input[type="text"] {
+  padding: 5px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.subtasks button {
+  padding: 6px 10px;
+  margin-left: 5px;
+}
+
+.subtask-item {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.subtask-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.dashboard {
+  margin-bottom: 30px;
+}
+
+.undo-btn {
+  background: #3498db;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #ddd;
+  margin-top: 10px;
+}
+
+.progress-bar > div {
+  height: 100%;
+  background: #2ecc71;
+}

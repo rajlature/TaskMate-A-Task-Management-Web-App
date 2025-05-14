@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TaskMate Pro</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>TaskMate Pro</h1>
+
+    <div class="search">
+      <input type="text" id="search-bar" placeholder="Search tasks..." onkeyup="filterTasks()">
+    </div>
+
+    <div class="input-section">
+      <input type="text" id="task-input" placeholder="Add a new task..." />
+      <input type="date" id="due-date" />
+      <select id="recurrence">
+        <option value="">None</option>
+        <option value="daily">Daily</option>
+        <option value="weekly">Weekly</option>
+        <option value="monthly">Monthly</option>
+      </select>
+      <select id="delegated">
+        <option value="">Owner</option>
+        <option value="true">Delegated</option>
+      </select>
+      <button onclick="addTask()"><i class="fas fa-plus"></i></button>
+    </div>
+
+    <div class="dashboard">
+      <canvas id="barChart" height="200"></canvas>
+      <canvas id="pieChart" height="200"></canvas>
+    </div>
+
+    <h2>Tasks</h2>
+    <ul id="task-list"></ul>
+
+    <h2>Deleted Tasks (Trash)</h2>
+    <ul id="deleted-task-list"></ul>
+
+    <div id="undo-section"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
